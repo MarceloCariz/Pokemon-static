@@ -86,7 +86,7 @@ const PokemonPage:NextPage<Props> = ({pokemon}) => {
 /// Aqui se generan los paths
 export const getStaticPaths:GetStaticPaths = async(ctx) =>{
     
-    const pokemon151 = [...Array(151)].map((value, index)=>`${index}`);
+    const pokemon151 = [...Array(151)].map((value, index)=>`${index + 1}`);
 
     return{
         paths: pokemon151.map(id =>({
